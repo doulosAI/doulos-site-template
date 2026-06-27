@@ -1,0 +1,13 @@
+:root {
+  --background: #0d0d0d;
+  --foreground: #f5f0e8;
+  --primary: #d97706;
+  --primary-foreground: #0d0d0d;
+  --muted: #1c1917;
+  --muted-foreground: #a8a29e;
+  --border: #292524;
+  --ambient-1: #b45309;
+  --ambient-2: #d97706;
+  --ambient-3: #92400e;
+  --ambient-4: #fbbf24;
+}
