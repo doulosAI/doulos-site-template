@@ -1,0 +1,71 @@
+{
+  "businessName": "Example Business LLC",
+  "phone": "(555) 123-4567",
+  "address": "123 Main St, Longmont, CO 80501",
+  "city": "Longmont",
+  "state": "CO",
+  "serviceArea": "Longmont & Boulder County",
+  "hero": {
+    "eyebrow": "Longmont, CO · Free Estimates",
+    "headline": "Quality Work. Honest Advice.",
+    "subheadline": "From a Contractor You Can Trust.",
+    "tagline": "Professional services in Longmont and Boulder County — done right."
+  },
+  "stats": [
+    {
+      "value": "5+",
+      "label": "Years Experience"
+    },
+    {
+      "value": "5★",
+      "label": "Google Rating"
+    },
+    {
+      "value": "Free",
+      "label": "Estimates"
+    }
+  ],
+  "about": {
+    "heading": "A Local Business You Can Count On",
+    "body": "We are a local business serving the Longmont area with professional services and honest advice. We treat every job like it's our own."
+  },
+  "services": [
+    {
+      "icon": "🔧",
+      "name": "Service One",
+      "desc": "Description of service one"
+    },
+    {
+      "icon": "🏠",
+      "name": "Service Two",
+      "desc": "Description of service two"
+    },
+    {
+      "icon": "⭐",
+      "name": "Service Three",
+      "desc": "Description of service three"
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Happy Customer",
+      "role": "Local Homeowner",
+      "stars": 5,
+      "text": "Great work and honest advice. They showed up on time, did the job right, and charged a fair price. Highly recommend."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do you offer free estimates?",
+      "a": "Yes, we offer free estimates for all projects. Call or text us to schedule."
+    },
+    {
+      "q": "What areas do you serve?",
+      "a": "We serve Longmont and the surrounding Boulder County area."
+    }
+  ],
+  "cta": {
+    "heading": "Ready to Get Started?",
+    "body": "Contact us today for a free estimate. No hold music — just a straight conversation about what you need."
+  }
+}
