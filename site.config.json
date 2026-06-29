@@ -5,11 +5,18 @@
   "city": "Longmont",
   "state": "CO",
   "serviceArea": "Longmont & Boulder County",
+  "heroImageUrl": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136",
+  "trustItems": [
+    "Licensed & Insured",
+    "Longmont Local",
+    "Free Estimates",
+    "5\u2605 Google Rated"
+  ],
   "hero": {
-    "eyebrow": "Longmont, CO · Free Estimates",
+    "eyebrow": "Longmont, CO \u00b7 Free Estimates",
     "headline": "Quality Work. Honest Advice.",
     "subheadline": "From a Contractor You Can Trust.",
-    "tagline": "Professional services in Longmont and Boulder County — done right."
+    "tagline": "Professional services in Longmont and Boulder County \u2014 done right."
   },
   "stats": [
     {
@@ -17,7 +24,7 @@
       "label": "Years Experience"
     },
     {
-      "value": "5★",
+      "value": "5\u2605",
       "label": "Google Rating"
     },
     {
@@ -31,17 +38,17 @@
   },
   "services": [
     {
-      "icon": "🔧",
+      "icon": "\ud83d\udd27",
       "name": "Service One",
       "desc": "Description of service one"
     },
     {
-      "icon": "🏠",
+      "icon": "\ud83c\udfe0",
       "name": "Service Two",
       "desc": "Description of service two"
     },
     {
-      "icon": "⭐",
+      "icon": "\u2b50",
       "name": "Service Three",
       "desc": "Description of service three"
     }
@@ -51,13 +58,13 @@
       "name": "Happy Customer",
       "role": "Local Homeowner",
       "stars": 5,
-      "text": "Great work and honest advice. They showed up on time, did the job right, and charged a fair price. Highly recommend."
+      "text": "Great work and honest advice. Showed up on time, did the job right, charged a fair price."
     }
   ],
   "faq": [
     {
       "q": "Do you offer free estimates?",
-      "a": "Yes, we offer free estimates for all projects. Call or text us to schedule."
+      "a": "Yes, free estimates for all projects. Call or text us to schedule."
     },
     {
       "q": "What areas do you serve?",
@@ -66,6 +73,6 @@
   ],
   "cta": {
     "heading": "Ready to Get Started?",
-    "body": "Contact us today for a free estimate. No hold music — just a straight conversation about what you need."
+    "body": "Contact us today for a free estimate. No hold music \u2014 just a straight conversation about what you need."
   }
 }
