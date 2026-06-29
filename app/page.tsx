@@ -155,13 +155,15 @@ export default function Home() {
         {/* ── About ── */}
         <section id="about" className="py-20 px-6 bg-muted/20">
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <SectionReveal>
+              <p className="text-xs font-bold text-primary tracking-widest uppercase mb-4 text-center">About Us</p>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 leading-tight uppercase text-center">
+                {config.about.heading}
+              </h2>
+              <div className="h-0.5 w-16 bg-primary mb-10 mx-auto" />
+            </SectionReveal>
+            <div className="grid md:grid-cols-2 gap-12 items-start">
               <SectionReveal>
-                <p className="text-xs font-bold text-primary tracking-widest uppercase mb-4">About Us</p>
-                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 leading-tight uppercase">
-                  {config.about.heading}
-                </h2>
-                <div className="h-0.5 w-16 bg-primary mb-6" />
                 <p className="text-muted-foreground leading-relaxed text-base md:text-lg">{config.about.body}</p>
                 <a
                   href={telHref}
