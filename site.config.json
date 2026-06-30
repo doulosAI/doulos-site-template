@@ -10,13 +10,13 @@
     "Licensed & Insured",
     "Longmont Local",
     "Free Estimates",
-    "5\u2605 Google Rated"
+    "5★ Google Rated"
   ],
   "hero": {
-    "eyebrow": "Longmont, CO \u00b7 Free Estimates",
+    "eyebrow": "Longmont, CO · Free Estimates",
     "headline": "Quality Work. Honest Advice.",
     "subheadline": "From a Contractor You Can Trust.",
-    "tagline": "Professional services in Longmont and Boulder County \u2014 done right."
+    "tagline": "Professional services in Longmont and Boulder County — done right."
   },
   "stats": [
     {
@@ -24,7 +24,7 @@
       "label": "Years Experience"
     },
     {
-      "value": "5\u2605",
+      "value": "5★",
       "label": "Google Rating"
     },
     {
@@ -38,17 +38,17 @@
   },
   "services": [
     {
-      "icon": "\ud83d\udd27",
+      "icon": "🔧",
       "name": "Service One",
       "desc": "Description of service one"
     },
     {
-      "icon": "\ud83c\udfe0",
+      "icon": "🏠",
       "name": "Service Two",
       "desc": "Description of service two"
     },
     {
-      "icon": "\u2b50",
+      "icon": "⭐",
       "name": "Service Three",
       "desc": "Description of service three"
     }
@@ -73,6 +73,7 @@
   ],
   "cta": {
     "heading": "Ready to Get Started?",
-    "body": "Contact us today for a free estimate. No hold music \u2014 just a straight conversation about what you need."
-  }
+    "body": "Contact us today for a free estimate. No hold music — just a straight conversation about what you need."
+  },
+  "showTransformation": true
 }
