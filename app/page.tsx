@@ -7,6 +7,7 @@ import SectionReveal from "@/components/animations/SectionReveal"
 import TextReveal from "@/components/animations/TextReveal"
 import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerReveal"
 import SwipeableCards from "@/components/animations/SwipeableCards"
+import BeforeAfterSlider from "@/components/animations/BeforeAfterSlider"
 import ChatbotWidget from "@/components/chatbot/ChatbotWidget"
 import { motion } from "motion/react"
 
@@ -229,6 +230,24 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ── Before / After ── */}
+        {config.showTransformation && config.heroImageUrl && (
+          <section className="py-20 px-6 bg-muted/20">
+            <div className="max-w-4xl mx-auto">
+              <SectionReveal>
+                <p className="text-xs font-bold text-primary tracking-widest uppercase mb-3 text-center">See The Difference</p>
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center uppercase">Drag To Compare</h2>
+                <p className="text-muted-foreground text-center mb-10 max-w-lg mx-auto leading-relaxed">
+                  A look at the kind of transformation {config.businessName} delivers.
+                </p>
+              </SectionReveal>
+              <SectionReveal delay={0.15}>
+                <BeforeAfterSlider imageUrl={config.heroImageUrl} />
+              </SectionReveal>
+            </div>
+          </section>
+        )}
 
         {/* ── Reviews ── */}
         {config.reviews.length > 0 && (
