@@ -11,6 +11,7 @@ import BeforeAfterSlider from "@/components/animations/BeforeAfterSlider"
 import ChatbotWidget from "@/components/chatbot/ChatbotWidget"
 import { motion } from "motion/react"
 import dynamic from "next/dynamic"
+import { useScrollProgress } from "@/components/three/useScrollProgress"
 
 const ConstructionCanvas = dynamic(() => import("@/components/three/ConstructionCanvas"), { ssr: false })
 const ParticleField      = dynamic(() => import("@/components/three/ParticleField"),      { ssr: false })
@@ -35,6 +36,7 @@ function Stars({ count }: { count: number }) {
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const { sectionRef: canvasSectionRef, progress: canvasProgress } = useScrollProgress<HTMLDivElement>()
   const phone   = config.phone
   const telHref = `tel:${phone.replace(/\D/g, "")}`
 
@@ -59,15 +61,12 @@ export default function Home() {
         >
           {config.heroImageUrl && (
             <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              className="hero-parallax-bg absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
               style={{ backgroundImage: `url('${config.heroImageUrl}?w=1920&auto=format&q=80')` }}
             />
           )}
           <div className="absolute inset-0 bg-background/75" />
-          {config.animationPreset === "construction" && <ConstructionCanvas />}
-          {config.animationPreset === "particles"    && <ParticleField />}
-          {config.animationPreset === "organic"      && <OrganicCanvas />}
-          {!config.heroImageUrl && !["construction","particles","organic"].includes(config.animationPreset as string) && <AmbientBackground />}
+          {!config.heroImageUrl && <AmbientBackground />}
 
           <div className="relative z-10 w-full max-w-3xl mx-auto">
             <SectionReveal>
@@ -231,6 +230,28 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ── Scroll-Driven 3D ── */}
+        {config.animationPreset !== "minimal" && (
+          <section
+            ref={canvasSectionRef}
+            className="relative h-[70vh] md:h-[80vh] overflow-hidden bg-background border-y border-border"
+          >
+            <div className="absolute inset-0">
+              {config.animationPreset === "construction" && <ConstructionCanvas progress={canvasProgress} />}
+              {config.animationPreset === "particles"    && <ParticleField progress={canvasProgress} />}
+              {config.animationPreset === "organic"      && <OrganicCanvas progress={canvasProgress} />}
+            </div>
+            <div className="relative z-10 h-full flex items-center justify-center px-6 pointer-events-none">
+              <SectionReveal>
+                <p className="text-xs font-bold text-primary tracking-widest uppercase mb-3 text-center">Precision In Motion</p>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-center uppercase max-w-lg">
+                  Built With The Same Care We Put Into Every Job
+                </h2>
+              </SectionReveal>
+            </div>
+          </section>
+        )}
 
         {/* ── Before / After ── */}
         {config.showTransformation && config.heroImageUrl && (
