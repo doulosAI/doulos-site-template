@@ -54,3 +54,22 @@
     transition: left 0.12s ease, top 0.12s ease;
   }
 }
+
+/* Native CSS scroll-driven parallax — off-main-thread, no JS.
+   Falls back to a static image in browsers without scroll-timeline support. */
+@keyframes hero-parallax {
+  from { transform: translateY(0) scale(1.12); }
+  to   { transform: translateY(10%) scale(1.12); }
+}
+
+.hero-parallax-bg {
+  transform: translateY(0) scale(1.12);
+}
+
+@supports (animation-timeline: scroll()) {
+  .hero-parallax-bg {
+    animation: hero-parallax linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 100vh;
+  }
+}
