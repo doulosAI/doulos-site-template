@@ -10,6 +10,11 @@ import SwipeableCards from "@/components/animations/SwipeableCards"
 import BeforeAfterSlider from "@/components/animations/BeforeAfterSlider"
 import ChatbotWidget from "@/components/chatbot/ChatbotWidget"
 import { motion } from "motion/react"
+import dynamic from "next/dynamic"
+
+const ConstructionCanvas = dynamic(() => import("@/components/three/ConstructionCanvas"), { ssr: false })
+const ParticleField      = dynamic(() => import("@/components/three/ParticleField"),      { ssr: false })
+const OrganicCanvas      = dynamic(() => import("@/components/three/OrganicCanvas"),      { ssr: false })
 
 type ServiceItem = (typeof config.services)[number]
 type ReviewItem  = (typeof config.reviews)[number]
@@ -59,14 +64,10 @@ export default function Home() {
             />
           )}
           <div className="absolute inset-0 bg-background/75" />
-          {config.heroImageUrl ? (
-            <>
-              <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-primary/25 blur-[130px] pointer-events-none" />
-              <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-primary/15 blur-[100px] pointer-events-none" />
-            </>
-          ) : (
-            <AmbientBackground />
-          )}
+          {config.animationPreset === "construction" && <ConstructionCanvas />}
+          {config.animationPreset === "particles"    && <ParticleField />}
+          {config.animationPreset === "organic"      && <OrganicCanvas />}
+          {!config.heroImageUrl && !["construction","particles","organic"].includes(config.animationPreset as string) && <AmbientBackground />}
 
           <div className="relative z-10 w-full max-w-3xl mx-auto">
             <SectionReveal>

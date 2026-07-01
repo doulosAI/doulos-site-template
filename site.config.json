@@ -75,5 +75,6 @@
     "heading": "Ready to Get Started?",
     "body": "Contact us today for a free estimate. No hold music — just a straight conversation about what you need."
   },
-  "showTransformation": true
+  "showTransformation": true,
+  "animationPreset": "construction"
 }
