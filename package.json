@@ -17,8 +17,8 @@
     "tailwind-merge": "^3.6.0",
     "@anthropic-ai/sdk": "^0.32.0",
     "three": "^0.171.0",
-    "@react-three/fiber": "^8.18.0",
-    "@react-three/drei": "^9.114.0"
+    "@react-three/fiber": "^9.6.1",
+    "@react-three/drei": "^10.7.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
